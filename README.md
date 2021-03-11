@@ -1,54 +1,41 @@
-# 自用QX脚本订阅及Task订阅，适用于QX TF版
+# 特别声明:原库被封新库[点击查看](https://github.com/wuzhi01/MyActions)
 
-# 所有内容均为转载，作者仓库：
+## 特别声明: 
 
-# NoByDa：https://github.com/NobyDa
-# chavyleung：https://github.com/chavyleung
-# zZPiglet：https://github.com/zZPiglet
-# songyangzz：https://github.com/songyangzz
-# lxk0301:https://gitee.com/lxk0301/jd_scripts
-# 58xinian:https://github.com/58xinian/icon
-# Cookie获取说明：
-1、爱奇艺--打开爱奇艺App后(AppStore中国区)，点击"我的", 如通知成功获取cookie
+* 本仓库发布的MyActions项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
 
-2、吾爱破解--手动登录 https://www.52pojie.cn 如通知成功获取cookie
+* 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 
-3、京东--Safari浏览器打开登录 https://bean.m.jd.com ,点击签到并且出现签到日历后, 如果通知获得cookie成功, 则可以使用此签到脚本
+* wuzhi01对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
 
-4、哔哩哔哩漫画--打开哔哩哔哩漫画后 (AppStore中国区)，单击"我的", 如果通知获取cookie成功
+* 间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播, wuzhi01 对于由此引起的任何隐私泄漏或其他后果概不负责.
 
-5、bilibili--打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com 获取cookie
+* 请勿将MyActions项目的任何内容用于商业或非法目的，否则后果自负.
 
-6、网易云音乐--1、先登录: https://music.163.com/m/login 2、再访问: https://music.163.com/#/user/level 3、提示: 获取会话: 成功!
+* 如果任何单位或个人认为该项目的脚本可能涉嫌侵犯其权利，则应及时通知并提供身份证明，所有权证明，我们将在收到认证文件后删除相关脚本.
 
-7、去哪儿--1、打开 APP 然后手动签到 1 次； 2、系统提示: 获取Cookie: 成功
+* 任何以任何方式查看此项目的人或直接或间接使用该MyActions项目的任何脚本的使用者都应仔细阅读此声明。wuzhi01 保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或MyActions项目的规则，则视为您已接受此免责声明.
 
-8、人人视频--1、打开 APP, 访问下个人中心 2、系统提示: 获取Cookie: 成功
+ **您必须在下载后的24小时内从计算机或手机中完全删除以上内容.**  </br>
+ ***您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读*** 
 
-9、顺丰速运--1、打开 APP, 访问下我的顺丰 > 去签到 (访问下去签到的页面即可, 不用点签到), 系统提示: 获取Cookie: 成功；2、打开   APP, 访问下27周年庆, 系统提示: 获取Cookie: 成功 (27周年)
+## 使用教程
 
-10、百度签到--览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/系统提示: 获取Cookie: 成功
+### 一丶Github Action 使用教程
+1. [按照这个教程进行 reposync](backup/reposync.md)
+2. 再在`Settings`-`Secrets`里面添加`JD_COOKIE`
+3. 多条 cookie 用`&`隔开，支持无数条 cookie
+4. 前三步之后，点击一下右上角的 star（fork 左边那个），让 workflow 运行一次。
 
-11、喜马拉雅--打开 APP, 访问下右下角账号，系统提示: 获取Cookie: 成功 获取Token: 成功
+喜马拉雅极速版专属环境变量[点击查看](backup/xmly/xmly.md)
 
-12、美团外卖--打开 APP , 进入签到页面, 系统提示: 获取刷新链接: 成功，然后手动签到 1 次, 系统提示: 获取Cookie: 成功
+lxk0301-环境变量合集（Secrets）配置[点击查看](secrets.md)
 
-13、美团--打开 APP , 然后手动签到 1 次, 系统提示: 获取Cookie: 成功 (首页 > 红包签到)
 
-14、时光相册--打开 APP 然后手动签到 1 次
+> 具体如何取 cookie 如何配置,可参考 [lxk0301 的获取京东Cookies教程](backup/GetJdCookie.md)
 
-15、京东到家--打开 APP 手动签到一次: `首页` > `签到` 或者 手机浏览器打开`https://daojia.jd.com/html/index.html`点击签到
+### 二丶Docker目前采用那位大佬的新版控制面板，如若出现问题，建议重新删除容器和镜像重新部署保持目录一致配置文件无须变更，之后手动对比更新一下就行了[Docker2 V3 gitee库使用教程](backup/docker/Docker2.md)
 
-16、WPS--打开 APP 我 > 签到 (右上角, 不用手动签到)，打开 `我的WPS会员` 小程序 (手动签到)
+### [如果你感觉上面的学不会，那么点这里可以走捷径](backup/docker/Docker2.1.md)
 
-17、智行火车--打开 APP 手动签到一次: 访问下右下角 `个人中心` > `签到`
-
-18、不背单词--打开 APP不背单词 然后手动签到 1 次, 系统提示: 首次写入不背单词Url成功🎉和首次写入不背单词Cookie成功
-
-19、海底捞--打开 APP海底捞 然后手动签到 1 次
-
-20、哈啰单车--打开 APP 进入签到页面: 我的 > 有哈有车，系统提示: 首次写入 哈啰出行 Token 成功 
-
-21、滴滴出行--进入"滴滴出行"，若弹出"首次写入滴滴出行 Token 成功
-
-22、饿了么--打开 APP, 访问下`我的`>`签到领红包`(左上角)
+### 三丶仓库fork数量上涨，建议加入[电报通知频道](https://t.me/joinchat/Uf-EARsmoLq4Lym3)或者收藏[Gitee库地址](https://gitee.com/shuye72/projects)，如若被删则第一时间能够收到最新消息。
